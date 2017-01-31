@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet"> 
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background:url("http://i.imgur.com/qRumBso.jpg");
+  background-size:500;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 90px;
+  color: blue;
+  margin: 10px 0 0 0;
+  background:black;
+
+}
+h2 {
+  background:black;
+  font-family: 'Vollkorn', serif;
+  text-align: center;
+  color: yellow;
+  margin: 0px 0 50px 0;
+  }
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("http://i.imgur.com/Lu62CmJ.jpg");
+}
+.second{
+  background-image: url("http://i.imgur.com/oBctIBG.jpg");
+}
+.third{
+  background-image: url("http://i.imgur.com/cfcbEEf.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Mobile Zone</h1>
+<h2>Get the best phone you want</h2>
+<div class="first">
+  <p>Xperia XZ<span class="price">Rs. 51,990/- </span><br />
+  <small>Capture without blur
+
+The smartphone camera with advanced movement and colour capture. So life looks as beautiful as it is. </small></p>
+</div>
+
+<div class="second">
+  <p>Xperia XA Ultra <span class="price"> Rs. 29,990/-</span><br />
+  <small>Make your nights shine
+
+Xperia XA Ultra boasts an advanced selfie cam for perfect poses, day or night. With 16-megapixels and Sony’s renowned low-light sensors you get sharp, bright, blur-free shots every time.</small></p>
+</div>
+  
+<div class="third">
+  <p> Xperia Z5 Premium Dual<span class="price">Rs. 42,990/- </span><br />
+  <small>Introducing the world’s first dual SIM 4K smartphone
+
+The smartphone of tomorrow is here today. Get ready for a 4K** display that leaves the rest behind.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
